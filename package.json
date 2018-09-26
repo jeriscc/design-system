@@ -1,0 +1,60 @@
+{
+  "name": "@jeriscc/design-system",
+  "version": "0.0.1-0",
+  "description": "Design System for Jerry Liang's website",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "babel src -d dist --ignore __tests__ && npm run fmt",
+    "dev": "babel src -d dist --watch --ignore __tests__",
+    "fmt": "prettier {.storybook,src}/**/*.js --single-quote --no-semi --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeriscc/design-system.git"
+  },
+  "author": "Jerry Liang",
+  "contributors": [
+    {
+      "name": "Jerry Liang",
+      "email": "jerryliangglobal@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeriscc/design-system/issues"
+  },
+  "keywords": [
+    "Jerry Liang",
+    "design system",
+    "pattern library"
+  ],
+  "homepage": "https://github.com/jeriscc/design-system#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.4",
+    "@fortawesome/free-brands-svg-icons": "^5.3.1",
+    "@fortawesome/free-regular-svg-icons": "^5.3.1",
+    "@fortawesome/free-solid-svg-icons": "^5.3.1",
+    "@fortawesome/react-fontawesome": "^0.1.3",
+    "clean-tag": "^1.0.4",
+    "lodash": "^4.17.11",
+    "palx": "1.0.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "serve": "^10.0.1",
+    "styled-components": "^3.4.9",
+    "styled-system": "1.1.7"
+  },
+  "devDependencies": {
+    "@storybook/addon-info": "^3.4.11",
+    "@storybook/react": "^3.4.11",
+    "@storybook/storybook-deployer": "^2.3.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "prettier": "^1.14.3"
+  }
+}
