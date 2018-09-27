@@ -73,6 +73,8 @@ a {
 a:active,
 a:hover {
   outline-width: 0;
+  transition: 0.1s;
+  opacity: .6;
 }
 abbr[title] {
   border-bottom: none;

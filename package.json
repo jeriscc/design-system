@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "prepare": "babel src -d dist --ignore __tests__ && npm run fmt",
-    "dev": "babel src -d dist --watch --ignore __tests__",
+    "start:dev": "babel src -d dist --watch --ignore __tests__",
     "fmt": "prettier {.storybook,src}/**/*.js --single-quote --no-semi --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

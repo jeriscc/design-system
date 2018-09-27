@@ -6,7 +6,6 @@ Inspired by the [HackClub’s design system][hackclub].
 
 TODO:
 - I don't understand why the global css is injected when everything is not wrapped in ThemeProvider.
-- Integrate [Font Awesome][FA] into design system.
 - Build out functional theme provider which can be used in website. [Styled-system](https://jxnblk.com/styled-system/getting-started)
 - Test out functionality of theme provider by exporting basic theme colors.
 
