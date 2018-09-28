@@ -69,6 +69,7 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: ${theme.colors.primary};
 }
 a:active,
 a:hover {
@@ -228,7 +229,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  color: ${theme.colors.gray[9]};
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -652,6 +653,31 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.microsoft {
+  animation: colorchange 10s infinite; /* animation-name followed by duration in seconds*/
+      /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 10s infinite; /* Chrome and Safari */
+  animation-timing-function: ease;
+}
+
+@keyframes colorchange
+{
+  0%   {color: #f65314;}
+  25%  {color: #7cbb00;}
+  50%  {color: #00a1f1;}
+  75%  {color: #ffbb00;}
+  100% {color: #f65314;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {color: #f65314;}
+  25%  {color: #7cbb00;}
+  50%  {color: #00a1f1;}
+  75%  {color: #ffbb00;}
+  100% {color: #f65314;}
 }
 
 `
