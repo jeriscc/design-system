@@ -260,8 +260,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: ${theme.font};
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -277,8 +276,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: ${theme.font};
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -294,8 +292,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: ${theme.font};
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -311,8 +308,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: ${theme.font};
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -328,8 +324,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: ${theme.font};
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -345,8 +340,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: ${theme.font};
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -626,8 +620,7 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: ${theme.mono};
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -655,29 +648,10 @@ pre tt:after {
   }
 }
 
-.microsoft {
-  animation: colorchange 10s infinite; /* animation-name followed by duration in seconds*/
-      /* you could also use milliseconds (ms) or something like 2.5s */
-  -webkit-animation: colorchange 10s infinite; /* Chrome and Safari */
-  animation-timing-function: ease;
-}
-
-@keyframes colorchange
-{
-  0%   {color: #f65314;}
-  25%  {color: #7cbb00;}
-  50%  {color: #00a1f1;}
-  75%  {color: #ffbb00;}
-  100% {color: #f65314;}
-}
-
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
-{
-  0%   {color: #f65314;}
-  25%  {color: #7cbb00;}
-  50%  {color: #00a1f1;}
-  75%  {color: #ffbb00;}
-  100% {color: #f65314;}
+.container {
+  margin: '0 auto',
+  max-width: 960,
+  padding: '1.45rem 1.0875rem',
 }
 
 `
