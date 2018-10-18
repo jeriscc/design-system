@@ -1,30 +1,12 @@
 // Copied from HackClub design system. Work in progress.
 
-import React, { Fragment } from 'react'
-import { ThemeProvider as Root, injectGlobal, css } from 'styled-components'
-import PropTypes from 'prop-types'
-import theme from './theme'
+import React, { Fragment } from 'react';
+import { ThemeProvider as Root, injectGlobal, css } from 'styled-components';
+import PropTypes from 'prop-types';
+import theme from './theme';
 
 const fontsCss = css`
-  @font-face {
-    font-family: Averta;
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(//hackclub.com/fonts/averta-regular.woff2) format('woff2'),
-      url(//hackclub.com/fonts/averta-regular.woff) format('woff');
-    unicode-range: U + 0000 - F8FE, U + F900-FFFF;
-  }
-  @font-face {
-    font-family: Averta;
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(//hackclub.com/fonts/averta-bold.woff2) format('woff2'),
-      url(//hackclub.com/fonts/averta-bold.woff) format('woff');
-    unicode-range: U + 0000 - F8FE, U + F900-FFFF;
-  }
-`
+`;
 
 injectGlobal`
 html {
@@ -654,25 +636,25 @@ pre tt:after {
   padding: '1.45rem 1.0875rem',
 }
 
-`
+`;
 
 const ThemeProvider = ({ theme, ...props }) => {
-  injectGlobal([], fontsCss)
+  injectGlobal([], fontsCss);
   return (
     <Root
       theme={theme}
       {...props}
       children={<Fragment>{props.children}</Fragment>}
     />
-  )
-}
+  );
+};
 
 ThemeProvider.propTypes = {
   theme: PropTypes.object
-}
+};
 
 ThemeProvider.defaultProps = {
   theme
-}
+};
 
-export default ThemeProvider
+export default ThemeProvider;

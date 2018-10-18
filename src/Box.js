@@ -1,24 +1,24 @@
-import styled from 'styled-components'
-import { space, width, color, responsiveStyle } from 'styled-system'
-import PropTypes from 'prop-types'
-import theme from './theme'
+import styled from 'styled-components';
+import { space, width, color, responsiveStyle } from 'styled-system';
+import PropTypes from 'prop-types';
+import theme from './theme';
 
-const align = responsiveStyle('text-align', 'align')
+const align = responsiveStyle('text-align', 'align');
 const Box = styled.div`
   ${space} ${width} ${color} ${align};
-`
+`;
 
-Box.displayName = 'Box'
+Box.displayName = 'Box';
 
 Box.defaultProps = {
   theme
-}
+};
 
 const numberStringOrArray = PropTypes.oneOfType([
   PropTypes.number,
   PropTypes.string,
   PropTypes.array
-])
+]);
 
 Box.propTypes = {
   color: PropTypes.string,
@@ -41,6 +41,6 @@ Box.propTypes = {
   pl: numberStringOrArray,
   px: numberStringOrArray,
   py: numberStringOrArray
-}
+};
 
-export default Box
+export default Box;

@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "prepare": "babel src -d dist --ignore __tests__ && npm run fmt",
-    "start:dev": "babel src -d dist --watch --ignore __tests__",
-    "fmt": "prettier {.storybook,src}/**/*.js --single-quote --no-semi --write",
+    "start:dev": "babel src -d dist --watch",
+    "fmt": "prettier {.storybook,src}/**/*.js --single-quote --write",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
@@ -48,14 +48,16 @@
     "styled-system": "1.1.7"
   },
   "devDependencies": {
-    "@storybook/addon-info": "^3.4.11",
-    "@storybook/react": "^3.4.11",
-    "@storybook/storybook-deployer": "^2.3.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-info": "4.0.0-alpha.24",
+    "@storybook/addon-options": "4.0.0-alpha.24",
+    "@storybook/addons": "4.0.0-alpha.24",
+    "@storybook/react": "4.0.0-alpha.24",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-styled-components": "^1.8.0",
     "prettier": "^1.14.3"
   }
 }
