@@ -13,13 +13,10 @@ storiesOf('Button', module)
       propTablesExclude: [Button]
     })
   )
-  .add('Layout component',
-    () => <Button>Hello</Button>,
-    {
-      info: {
-        header: true,
-        text: description,
-        propTablesExclude: []
-      }
+  .add('Layout component', () => <Button>Hello</Button>, {
+    info: {
+      header: true,
+      text: description,
+      propTablesExclude: []
     }
-  );
+  });

@@ -6,15 +6,14 @@ import { Container } from '../src';
 storiesOf('Container', module)
   .addDecorator(
     withInfo({
-      text: "Container Component",
+      text: 'Container Component',
       inline: false
     })
   )
-  .add(
-    'Container component', () => (
-      <Container p={4} bg="smoke" style={{ height: '100vh' }}>
-        Container Component
-      </Container>
+  .add('Container component', () => (
+    <Container p={4} bg="smoke" style={{ height: '100vh' }}>
+      Container Component
+    </Container>
   ))
   .add('Custom maxWidth', () => (
     <Container maxWidth={32} p={4} bg="smoke" style={{ height: '100vh' }}>

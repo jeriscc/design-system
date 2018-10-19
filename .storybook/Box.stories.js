@@ -14,21 +14,18 @@ storiesOf('Box', module)
       propTablesExclude: [Box],
       styles: {
         infoBody: {
-          margin: "none"
+          margin: 'none'
         }
       }
     })
   )
-  .add('Layout component',
-    () => <Box p={3}>Hello</Box>,
-    {
-      info: {
-        header: true,
-        text: description,
-        propTablesExclude: []
-      }
+  .add('Layout component', () => <Box p={3}>Hello</Box>, {
+    info: {
+      header: true,
+      text: description,
+      propTablesExclude: []
     }
-  )
+  })
   .add('Padding', () => <Box p={3}>Hello</Box>)
   .add('Margin', () => <Box m={3}>Hello</Box>)
   .add('Color', () => (

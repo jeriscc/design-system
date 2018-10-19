@@ -5,8 +5,7 @@ import { ThemeProvider as Root, injectGlobal, css } from 'styled-components';
 import PropTypes from 'prop-types';
 import theme from './theme';
 
-const fontsCss = css`
-`;
+const fontsCss = css``;
 
 injectGlobal`
 html {
@@ -47,17 +46,6 @@ progress {
 [hidden],
 template {
   display: none;
-}
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-  color: ${theme.colors.primary};
-}
-a:active,
-a:hover {
-  outline-width: 0;
-  transition: 0.1s;
-  opacity: .6;
 }
 abbr[title] {
   border-bottom: none;
@@ -197,7 +185,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 112.5%/1.45em ${theme.font};
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -212,7 +200,7 @@ html {
 }
 body {
   color: ${theme.colors.gray[9]};
-  font-family: georgia, serif;
+  font-family: ${theme.font};
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
