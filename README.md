@@ -6,9 +6,7 @@ Inspired by the [HackClub Design System][hackclub] and [Princeline Design System
 
 TODO:
 - I don't understand why the global css is injected when everything is not wrapped in ThemeProvider.
-- Build out functional theme provider which can be used in website. [Styled-system](https://jxnblk.com/styled-system/getting-started)
 - Write out all compoenents
-- Write out storybook for those components
 - Test out functionality of theme provider by exporting basic theme colors.
 
 LONGTERM GOALS:

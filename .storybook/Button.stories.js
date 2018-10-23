@@ -13,10 +13,25 @@ storiesOf('Button', module)
       propTablesExclude: [Button]
     })
   )
-  .add('Layout component', () => <Button>Hello</Button>, {
+  .add('Button component', () => <Button>Hello World</Button>, {
     info: {
       header: true,
       text: description,
       propTablesExclude: []
     }
-  });
+  })
+  .add('Inverted', () => (
+      <div>
+        <Button bg="cyan.6" color="white" inverted mr={2}>Inverted</Button>
+        <Button>Normal</Button>
+      </div>
+    ),
+    {
+      info: {
+        text: "Buttons with the `inverted` flag use their `bg` prop (rather than `color`) as the base of their shadow"
+      }
+    }
+  )
+  .add('disabled', () => (
+    <Button disabled>Disabled</Button>
+  ));

@@ -1,7 +1,7 @@
 // Build off of HackClub design system. Work in progress.
 
 import palx from 'palx';
-// import { includes, get, omit } from 'lodash'
+import { includes, get, omit } from 'lodash'
 // import { removeProps } from 'styled-system'
 
 const cyan = '#06c1da';
@@ -66,12 +66,30 @@ export const fontSizes = [12, 14, 16, 20, 24, 32, 48];
 
 export const maxContainerWidth = '5rem';
 
+export const cx = key => get(colors, key, key)
+
+export const hexa = (color, alpha) => {
+  const hex = cx(color)
+  if (!includes(hex, '#')) return shadowColor
+  const r = parseInt(hex.slice(1, 3), 16),
+    g = parseInt(hex.slice(3, 5), 16),
+    b = parseInt(hex.slice(5, 7), 16)
+
+  if (alpha >= 0) {
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`
+  } else {
+    return `rgb(${r}, ${g}, ${b})`
+  }
+}
+
+
 const theme = {
   colors,
   font,
   mono,
   maxContainerWidth,
   space,
+  hexa,
   fontSizes
 };
 

@@ -1,8 +1,15 @@
 import Box from './Box';
 import styled from 'styled-components';
 // import PropTypes from 'prop-types';
-// import { space } from 'styled-system';
-import theme from './theme';
+import {
+  space,
+  width,
+  color,
+  fontSize,
+  textAlign,
+  propTypes
+} from 'styled-system'
+import theme, { hexa } from './theme';
 
 const Button = Box.withComponent('a').extend`
   -webkit-font-smoothing: antialiased;
@@ -16,15 +23,32 @@ const Button = Box.withComponent('a').extend`
   line-height: 1.125;
   appearance: none;
   cursor: pointer;
-  padding: 0.25em 1em;
+  transition ${3 / 16}s cubic-bezier(0.375, 0, 0.675, 1) box-shadow;
+  box-shadow: none;
   border-radius: 9999px;
   border: none;
+  
+  &:hover,
+  &:focus {
+    ${ props => props.disabled == false && {
+      boxShadow: `0 1.5px 4px ${ props.inverted ? hexa(props.bg, 0.5) : hexa(props.color, 0.3)};`}
+    }
+  }
+
+  &:active {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  ${props => props.disabled && { opacity: 0.5, cursor: 'not-allowed'}};
 `;
 
 Button.defaultProps = {
   theme,
   bg: 'cyan.0',
   color: 'cyan.6',
+  inverted: false,
+  disabled: false,
   fontSize: 3,
   m: 0,
   px: 3,

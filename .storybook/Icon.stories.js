@@ -18,7 +18,7 @@ storiesOf('Icon', module)
       }
     })
   )
-  .add('Layout component', () => <Icon icon={['fab', 'github']}/>, {
+  .add('Icon component', () => <Icon icon={['fab', 'github']}/>, {
     info: {
       header: true,
       text: description,
