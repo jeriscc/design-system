@@ -3,10 +3,9 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fab);
-
-// What if I could change this to automatically import icons?
-// How would that impact performance?
+library.add(fas);
 
 export default Icon;

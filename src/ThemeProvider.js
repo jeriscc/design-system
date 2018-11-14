@@ -1,13 +1,11 @@
 // Copied from HackClub design system. Work in progress.
 
 import React, { Fragment } from 'react';
-import { ThemeProvider as Root, injectGlobal, css } from 'styled-components';
+import { ThemeProvider as Root, createGlobalStyle } from 'styled-components';
 import PropTypes from 'prop-types';
 import theme from './theme';
 
-const fontsCss = css``;
-
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -627,12 +625,16 @@ pre tt:after {
 `;
 
 const ThemeProvider = ({ theme, ...props }) => {
-  injectGlobal([], fontsCss);
   return (
     <Root
       theme={theme}
       {...props}
-      children={<Fragment>{props.children}</Fragment>}
+      children={
+        <Fragment>
+          <GlobalStyle />
+          {props.children}
+        </Fragment>
+      }
     />
   );
 };

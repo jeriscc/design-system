@@ -18,10 +18,14 @@ storiesOf('Link', module)
       }
     })
   )
-  .add('Link component', () => <Link href="https://www.jeris.cc">Hello World</Link>, {
-    info: {
-      header: true,
-      text: description,
-      propTablesExclude: []
+  .add(
+    'Link component',
+    () => <Link href="https://www.jeris.cc">Hello World</Link>,
+    {
+      info: {
+        header: true,
+        text: description,
+        propTablesExclude: []
+      }
     }
-  })
+  );

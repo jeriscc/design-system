@@ -8,10 +8,10 @@ import {
   fontSize,
   textAlign,
   propTypes
-} from 'styled-system'
+} from 'styled-system';
 import theme, { hexa } from './theme';
 
-const Button = Box.withComponent('a').extend`
+const Button = styled(Box)`
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   vertical-align: middle;
@@ -30,9 +30,12 @@ const Button = Box.withComponent('a').extend`
   
   &:hover,
   &:focus {
-    ${ props => props.disabled == false && {
-      boxShadow: `0 1.5px 4px ${ props.inverted ? hexa(props.bg, 0.5) : hexa(props.color, 0.3)};`}
-    }
+    ${props =>
+      props.disabled == false && {
+        boxShadow: `0 1.5px 4px ${
+          props.inverted ? hexa(props.bg, 0.5) : hexa(props.color, 0.3)
+        };`
+      }}
   }
 
   &:active {
@@ -40,10 +43,11 @@ const Button = Box.withComponent('a').extend`
     box-shadow: none;
   }
 
-  ${props => props.disabled && { opacity: 0.5, cursor: 'not-allowed'}};
+  ${props => props.disabled && { opacity: 0.5, cursor: 'not-allowed' }};
 `;
 
 Button.defaultProps = {
+  as: 'a',
   theme,
   bg: 'cyan.0',
   color: 'cyan.6',

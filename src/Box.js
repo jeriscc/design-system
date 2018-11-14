@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { space, width, color, responsiveStyle } from 'styled-system';
+import { space, width, color, style } from 'styled-system';
 import PropTypes from 'prop-types';
 import theme from './theme';
 
-const align = responsiveStyle('text-align', 'align');
+const align = style('text-align', 'align');
 const Box = styled.div`
   ${space} ${width} ${color} ${align};
 `;
