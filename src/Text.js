@@ -44,7 +44,9 @@ Text.propTypes = {
 
 Text.defaultProps = {
   theme,
-  m: 0
+  m: 0,
+  p: 0,
+  as: 'p'
 };
 
 export default Text;
