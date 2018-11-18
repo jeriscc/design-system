@@ -2,7 +2,7 @@
 
 import React, { Fragment } from 'react';
 import { ThemeProvider as Root, createGlobalStyle } from 'styled-components';
-// import styledNormalize from 'styled-normalize'
+import { Normalize } from 'styled-normalize';
 import PropTypes from 'prop-types';
 import theme from './theme';
 
@@ -67,13 +67,6 @@ p {
     font-size: 100%;
   }
 }
-
-.container {
-  margin: '0 auto',
-  max-width: 960,
-  padding: '1.45rem 1.0875rem',
-}
-
 `;
 
 const ThemeProvider = ({ theme, ...props }) => {
@@ -83,6 +76,7 @@ const ThemeProvider = ({ theme, ...props }) => {
       {...props}
       children={
         <Fragment>
+          <Normalize />
           <GlobalStyle />
           {props.children}
         </Fragment>
