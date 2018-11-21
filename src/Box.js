@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { space, width, color, style } from 'styled-system';
+import { space, width, color, textAlign } from 'styled-system';
 import PropTypes from 'prop-types';
 import theme from './theme';
 
-const align = style('text-align', 'align');
 const Box = styled.div`
-  ${space} ${width} ${color} ${align};
+  ${space} ${width} ${color} ${textAlign};
 `;
 
 Box.displayName = 'Box';

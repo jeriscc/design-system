@@ -25,11 +25,13 @@ storiesOf('Text', module)
       propTablesExclude: []
     }
   })
-  .add('Various Sizes', () => <div>
-    <Text fontSize={6}>Size 6</Text>
-    <Text fontSize={5}>Size 5</Text>
-    <Text fontSize={4}>Size 4</Text>
-    <Text fontSize={3}>Size 3</Text>
-    <Text fontSize={2}>Size 2</Text>
-    <Text fontSize={1}>Size 1</Text>
-  </div>);
+  .add('Various Sizes', () => (
+    <div>
+      <Text fontSize={6}>Size 6</Text>
+      <Text fontSize={5}>Size 5</Text>
+      <Text fontSize={4}>Size 4</Text>
+      <Text fontSize={3}>Size 3</Text>
+      <Text fontSize={2}>Size 2</Text>
+      <Text fontSize={1}>Size 1</Text>
+    </div>
+  ));

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Text from './Text';
 import theme from './theme';
+import PropTypes from 'prop-types';
 
 const Link = styled(Text)`
   background-color: transparent;
@@ -16,8 +17,10 @@ const Link = styled(Text)`
 Link.displayName = 'Link';
 
 Link.defaultProps = {
+  href: PropTypes.string,
+  to: PropTypes.string,
   theme,
   color: 'info'
-}
+};
 
 export default Link;
