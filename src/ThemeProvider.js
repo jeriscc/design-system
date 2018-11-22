@@ -19,6 +19,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  font-size: ${theme.fontSizes[2]}px;
   margin: 0;
   color: ${theme.colors.gray[9]};
   font-family: ${theme.font};

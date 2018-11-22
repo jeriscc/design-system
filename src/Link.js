@@ -16,9 +16,15 @@ const Link = styled(Text)`
 
 Link.displayName = 'Link';
 
-Link.defaultProps = {
+Link.propTypes = {
   href: PropTypes.string,
   to: PropTypes.string,
+  theme: PropTypes.object,
+  color: PropTypes.string
+}
+
+Link.defaultProps = {
+  as: 'a',
   theme,
   color: 'info'
 };

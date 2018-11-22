@@ -1,9 +1,10 @@
-// Build off of HackClub design system. Work in progress.
-
 import palx from 'palx';
-import { includes, get, omit } from 'lodash';
-// import { removeProps } from 'styled-system'
+import { includes, get } from 'lodash';
 
+//=============================================================================
+// COLORS
+//=============================================================================
+// The primary color
 const cyan = '#06c1da';
 export const palette = palx(cyan);
 
@@ -34,12 +35,31 @@ export const colors = {
   ...palette
 };
 
+// Priceline Design System Shadows
+export const shadowColor = 'rgba(0,0,0,0.08)';
+export const boxShadows = [
+  `0 0 2px 0 rgba(0,0,0,.08),0 1px 4px 0 rgba(0,0,0,.16)`,
+  `0 0 2px 0 rgba(0,0,0,.08),0 2px 8px 0 rgba(0,0,0,.16)`,
+  `0 0 2px 0 rgba(0,0,0,.08),0 4px 16px 0 rgba(0,0,0,.16)`,
+  `0 0 2px 0 rgba(0,0,0,.08),0 8px 32px 0 rgba(0,0,0,.16)`
+];
+
+//=============================================================================
+// FONTS
+//=============================================================================
 export const font = `-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif`;
-
 export const mono = `"SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
 "Liberation Mono", Menlo, Courier, monospace`;
 
+export const fontSizes = [12, 14, 16, 20, 24, 32, 48];
+
+export const regular = 400;
+export const bold = 600;
+
+//=============================================================================
+// HELPER FUNCTIONS
+//=============================================================================
 const createMediaQuery = n => `@media screen and (min-width:${n}em)`;
 
 const addAliases = (arr, aliases) =>
@@ -52,22 +72,18 @@ const addAliases = (arr, aliases) =>
     })
   );
 
-export const breakpoints = [32, 40, 48, 64];
-
-export const mediaQueries = breakpoints.map(createMediaQuery);
-
-const aliases = ['sm', 'md', 'lg', 'xl'];
-
-addAliases(breakpoints, aliases);
-addAliases(mediaQueries, aliases);
-
-export const space = [0, 4, 8, 16, 32, 64, 128];
-export const fontSizes = [12, 14, 16, 20, 24, 32, 48];
-
-export const maxContainerWidth = '5rem';
-
+/**
+ * @param {string} key - key of color in colors object
+ * @return {string} - hex value of that color (or the key
+ * itself if it is not found)
+ */
 export const cx = key => get(colors, key, key);
 
+/**
+ * @param {string} color - name/key/hex of color in colors object
+ * @param {number} alpha - the desired transparency value
+ * @return {string} - rgba string for the color with transparency
+ */
 export const hexa = (color, alpha) => {
   const hex = cx(color);
   if (!includes(hex, '#')) return shadowColor;
@@ -82,8 +98,16 @@ export const hexa = (color, alpha) => {
   }
 };
 
-export const regular = 400;
-export const bold = 600;
+//=============================================================================
+// BREAKPOINTS, SPACING
+//=============================================================================
+export const breakpoints = [32, 40, 48, 64];
+export const mediaQueries = breakpoints.map(createMediaQuery);
+const aliases = ['sm', 'md', 'lg', 'xl'];
+addAliases(breakpoints, aliases);
+addAliases(mediaQueries, aliases);
+export const space = [0, 4, 8, 16, 32, 64, 128];
+export const maxContainerWidth = '5rem';
 
 const theme = {
   colors,
