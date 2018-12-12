@@ -3,7 +3,6 @@ import Text from './Text';
 import theme from './theme';
 
 const Heading = styled(Text)`
-  color: inherit;
   line-height: 1.25;
 `;
 

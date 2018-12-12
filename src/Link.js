@@ -6,11 +6,12 @@ import PropTypes from 'prop-types';
 const Link = styled(Text)`
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
   &:active,
   &:hover {
     outline-width: 0;
-    transition: 0.1s;
     opacity: 0.6;
+    transition: 0.3s ease;
   }
 `;
 
